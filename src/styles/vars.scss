@@ -1,0 +1,63 @@
+:root {
+	/* Background */
+	--btn-bg-color: #dae8f0;
+	--btn-bg-hover: #2b2d91;
+	--bg-card: #e1f1f8;
+	--bg-card-second: #e9f2f8;
+	--graphic-line: #a2d5e8;
+	--bg-popup: #99d9f1;
+	--bg-date-picker: #a1cbf1;
+
+	/* gradients */
+	--light-gradient: linear-gradient(180deg, #dae8f0 0%, #ffffff 100%);
+	--dark-gradient: linear-gradient(180deg, #dae8f0 8.33%, #ffffff 100%);
+
+	/* Colors */
+	--main-color: #000;
+	--text-color: #252525;
+	--accent-color: #0e1079;
+	--white-color: #fff;
+
+	/* font-size */
+	--fz-btn-xs: 18px;
+	--fz-text: 20px;
+	--fz-btn: 24px;
+	--fz-main-heading: 48px;
+	--fz-mob-btn: 1rem;
+
+	/* font-weight */
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-black: 900;
+
+	/* Border */
+	--border: 1.5px solid #0e1079;
+
+	/* Radius */
+	--radius-xs: 5px;
+	--radius-sm: 10px;
+	--radius-btn: 13px;
+	--radius: 20px;
+	--radius-round: 50%;
+
+	/* Padding */
+	--padding-xs: 8px;
+	--padding-sm: 16px;
+	--padding-md: 24px;
+	--padding-lg: 32px;
+
+	/* gap */
+	--gap-xs: 10px;
+	--gap-sm: 20px;
+	--gap-md: 30px;
+
+	/* Margin */
+	--margin-xs: 5px;
+	--margin-sm: 10px;
+	--margin-md: 20px;
+	--margin-lg: 30px;
+	--margin-xl: 40px;
+}

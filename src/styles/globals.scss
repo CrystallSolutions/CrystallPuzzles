@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-first);
+  background: var(--dark-gradient) fixed;
+  color: var(--text-color);
+  position: relative;
+}
+
+#portal {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}

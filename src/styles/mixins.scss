@@ -1,0 +1,38 @@
+@mixin sm() {
+  @media (max-width: 440px) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media (max-width: 840px) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin custom-scrollbar(
+  $scrollbar-width: 5px,
+  $thumb-color: var(--accent-color),
+  $thumb-radius: 5px
+) {
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $thumb-radius;
+  }
+}
