@@ -1,7 +1,7 @@
 name: Deploy master to server
 
 env:
-  MASTER_DIR: ~/app/servers/crystall_puzzles
+  MASTER_DIR: ~/app/servers/crystal_puzzles
 
 on:
   push:
