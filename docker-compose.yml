@@ -3,12 +3,12 @@ services:
     build: .
     ports:
       - "3000:3000"
-#     volumes:
-#       - ~/app/volumes/crystall_puzzles:/app
-#     networks:
-#       - backend
+    volumes:
+      - ~/app/volumes/crystall_puzzles:/app
+    networks:
+      - backend
 
-# networks:
-#   backend:
-#     name: backend
-#     external: true
+networks:
+  backend:
+    name: backend
+    external: true
