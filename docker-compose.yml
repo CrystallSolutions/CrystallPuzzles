@@ -10,5 +10,5 @@ services:
 
 networks:
   backend:
-    name: backend
+    name: app_backend
     external: true
