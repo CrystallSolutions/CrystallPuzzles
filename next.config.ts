@@ -3,10 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   basePath: "/crystal_puzzles",
-  trailingSlash: true,
+  assetPrefix: "/crystal_puzzles",
   sassOptions: {
-    additionalData: `$color: red;`,
-  },
+    additionalData: `$color: red;`
+  }
 };
 
 export default nextConfig;
