@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+#     volumes:
+#       - ~/app/volumes/crystall_puzzles:/app
+#     networks:
+#       - backend
+
+# networks:
+#   backend:
+#     name: backend
+#     external: true
