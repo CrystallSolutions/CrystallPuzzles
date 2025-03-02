@@ -2,7 +2,7 @@ import {Policy} from "@/features";
 import {Button, Input, Password, Title} from "@/shared";
 import styles from "./page.module.scss";
 
-export default function page() {
+export default function RegisterPage() {
   return (
     <div className={styles.container}>
       <Title tag='h1' isCentered className={styles.title}>
@@ -31,13 +31,9 @@ export default function page() {
           required
           placeholder='ivanov@example.com'
         />
-        <Password />
+        <Password dataKey='password' label='Пароль' />
         <Policy />
-        <Button
-          id='registration'
-          className={styles.register_btn}
-          bgColor='dark'
-        >
+        <Button id='registration' bgColor='dark'>
           Зарегистрироваться
         </Button>
       </form>

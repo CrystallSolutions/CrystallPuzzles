@@ -21,13 +21,11 @@ export default function LoginPage() {
           placeholder='ivanov@example.com'
         />
 
-        <Password />
+        <Password dataKey='password' label='Пароль' />
 
-        <div className={styles.forget_password}>
-          <Link href='/change-password' className={styles.link}>
-            Забыли пароль?
-          </Link>
-        </div>
+        <Link href='/change-password' className={styles.link}>
+          Забыли пароль?
+        </Link>
 
         <Policy />
 

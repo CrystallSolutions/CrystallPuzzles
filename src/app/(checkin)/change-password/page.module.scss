@@ -32,19 +32,10 @@
   }
 }
 
-.error {
-  color: var(--error-color);
-
-  &::before {
-    content: "* ";
-    color: var(--error-color);
-  }
-}
-
 .link {
+  text-align: end;
   cursor: pointer;
   font: var(--fw-regular) 1.4rem var(--ff-second);
-  text-align: end;
   color: var(--accent-color);
 
   &:hover {
@@ -53,22 +44,5 @@
 
   @include sm() {
     font-size: 1.2rem;
-  }
-}
-
-.btn_container {
-  margin-top: var(--spacing-xl);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-lg);
-}
-
-.register_btn {
-  width: fit-content;
-
-  @include sm() {
-    width: 100%;
   }
 }

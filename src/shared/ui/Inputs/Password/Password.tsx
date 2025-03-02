@@ -1,17 +1,22 @@
 "use client";
 
-import styles from "./Password.module.scss";
-import {Input} from "../Input/Input";
 import {useState} from "react";
 import {Eye, EyeOff} from "lucide-react";
+import {Input} from "../Input/Input";
+import styles from "./Password.module.scss";
 
-export const Password = () => {
+interface PasswordProps {
+  label: string;
+  dataKey: string;
+}
+
+export const Password = ({dataKey, label}: PasswordProps) => {
   const [openEye, setOpenEye] = useState(true);
 
   return (
     <Input
-      label='Пароль'
-      dataKey='password'
+      label={label}
+      dataKey={dataKey}
       type={openEye ? "password" : "text"}
       required
     >
