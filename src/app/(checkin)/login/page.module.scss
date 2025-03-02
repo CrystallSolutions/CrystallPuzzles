@@ -12,15 +12,12 @@
   }
 }
 
-.header {
+.title {
   margin-bottom: var(--spacing-xxl);
-  font: var(--fw-regular) 4.2rem var(--ff-first);
-  text-align: center;
 
   @include sm() {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl) ;
     width: 100%;
-    font: var(--fw-medium) 2.4rem var(--ff-first);
   }
 }
 
@@ -29,7 +26,6 @@
   flex-direction: column;
   gap: var(--spacing-lg);
   font: var(--fw-regular) 1.4rem var(--ff-second);
-  color: var(--accent-color);
 
   @include sm {
     font-size: 1.2rem;

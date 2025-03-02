@@ -1,0 +1,26 @@
+@use "src/app/styles/mixins.scss" as *;
+
+
+.h1 {
+  font: var(--font-h1);
+
+  @include lg() {
+    font-size: 4.2rem;
+  }
+
+  @include sm() {
+    font: var(--fw-medium) 2.4rem var(--ff-first);
+  }
+}
+
+.h2 {
+  font: var(--font-h2);
+
+  @include sm() {
+    font-size: 1.6rem;
+  }
+}
+
+.isCentered {
+  text-align: center;
+}
