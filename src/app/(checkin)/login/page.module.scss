@@ -1,0 +1,81 @@
+@use "src/app/styles/mixins.scss" as *;
+
+.container {
+  margin: 0 auto;
+  max-width: 47rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  @include sm() {
+    width: 100%;
+  }
+}
+
+.header {
+  margin-bottom: var(--spacing-xxl);
+  font: var(--fw-regular) 4.2rem var(--ff-first);
+  text-align: center;
+
+  @include sm() {
+    margin-bottom: var(--spacing-sm);
+    width: 100%;
+    font: var(--fw-medium) 2.4rem var(--ff-first);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  font: var(--fw-regular) 1.4rem var(--ff-second);
+  color: var(--accent-color);
+
+  @include sm {
+    font-size: 1.2rem;
+  }
+}
+
+.error {
+  color: var(--error-color);
+
+  &::before {
+    content: "* ";
+    color: var(--error-color);
+  }
+}
+
+.forget_password {
+  text-align: end;
+}
+
+.link {
+  cursor: pointer;
+  font: var(--fw-regular) 1.4rem var(--ff-second);
+  color: var(--accent-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include sm() {
+    font-size: 1.2rem;
+  }
+}
+
+.btn_container {
+  margin-top: var(--spacing-xl);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.register_btn {
+  width: fit-content;
+
+  @include sm() {
+    width: 100%;
+  }
+}

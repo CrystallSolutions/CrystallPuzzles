@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: var(--spacing-lg);
+  width: 2.8rem;
+  height: 2.8rem;
+  outline: none;
+}
+
+.label {
+  font: var(--fw-regular) 1.2rem var(--ff-second);
+  color: var(--accent-color);
+  width: 100%;
+}
+
+.link {
+  padding-left: var(--spacing-xs);
+  font: var(--fw-medium) 1.4rem var(--ff-second);
+  color: inherit;
+}

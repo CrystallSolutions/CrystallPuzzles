@@ -1,1 +1,3 @@
-// Public Api init
+import {Policy} from "./Policy/Policy";
+
+export {Policy};

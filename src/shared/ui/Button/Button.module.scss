@@ -1,0 +1,38 @@
+@use "src/app/styles/mixins.scss" as *;
+
+.btn {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: var(--fw-medium) var(--fz-btn-xs) var(--ff-first);
+  border: var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include md() {
+    font-size: var(--fz-mob-btn);
+  }
+}
+
+.dark {
+  background-color: var(--accent-color);
+  color: var(--bg-card);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+  }
+}
+
+.light {
+  background-color: transparent;
+  color: var(--accent-color);
+
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-card);
+  }
+}

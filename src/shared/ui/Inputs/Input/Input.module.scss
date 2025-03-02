@@ -1,0 +1,30 @@
+@use "src/app/styles/mixins.scss" as *;
+
+.container {
+  position: relative;
+  display: grid;
+  gap: var(--spacing-xs);
+
+  @include sm() {
+    font-size: inherit;
+  }
+}
+
+.label {
+  font: var(--fw-regular) 1.4rem var(--ff-second);
+  color: var(--accent-color);
+}
+
+.input {
+  padding: var(--spacing-md) var(--spacing-sm);
+  width: 47rem;
+  background-color: var(--white-color);
+  font: var(--fw-regular) var(--fz-btn-xs) var(--ff-second);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+
+  @include sm() {
+    width: 100%;
+  }
+}

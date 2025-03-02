@@ -1,4 +1,4 @@
-@use './vars.scss';
+@use "./vars.scss";
 
 *,
 *::before,
@@ -27,11 +27,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+html {
+font-size: 62.5%;
+}
 
 body {
   margin: 0;
   font-family: var(--ff-first);
-  background: var(--dark-gradient) fixed;
+  background: var(--gradient) fixed;
   color: var(--text-color);
   position: relative;
 }

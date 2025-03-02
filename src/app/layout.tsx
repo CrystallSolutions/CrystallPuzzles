@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {Roboto, Rubik} from "next/font/google";
-import "../styles/globals.scss";
+import "./styles/globals.scss";
 
 const roboto = Roboto({
   variable: "--ff-first",
