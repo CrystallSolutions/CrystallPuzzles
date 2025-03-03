@@ -1,7 +1,6 @@
+import { Policy } from '@/features';
 import { Button, Input, Password, Title } from '@/shared';
 import styles from './page.module.scss';
-import Link from 'next/link';
-import { Policy } from '@/features';
 
 export default function ChangePasswordPage() {
   return (
@@ -20,11 +19,6 @@ export default function ChangePasswordPage() {
         <Password label="Текущий пароль" dataKey="old_password" />
         <Password label="Новый пароль" dataKey="new_password" />
         <Password label="Повторите новый пароль" dataKey="repeat_password" />
-
-        <Link href="/change-password" className={styles.link}>
-          Забыли пароль?
-        </Link>
-
         <Policy />
         <Button bgColor="dark" id="change">
           Сменить
