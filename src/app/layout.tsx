@@ -1,23 +1,23 @@
-import type {Metadata} from "next";
-import {Roboto, Rubik} from "next/font/google";
-import "./styles/globals.scss";
+import type { Metadata } from 'next';
+import { Roboto, Rubik } from 'next/font/google';
+import './styles/globals.scss';
 
 const roboto = Roboto({
-  variable: "--ff-first",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  variable: '--ff-first',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '900'],
 });
 
 const rubik = Rubik({
-  variable: "--ff-second",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
+  variable: '--ff-second',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '900'],
 });
 
 export const metadata: Metadata = {
-  title: "Crystal Puzzles",
+  title: 'Crystal Puzzles',
   description:
-    "Приложение для составления расписания для тренеров, создание плана занятий для учеников и для отслеживания статистики",
+    'Приложение для составления расписания для тренеров, создание плана занятий для учеников и для отслеживания статистики',
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='ru'>
+    <html lang="ru">
       <body className={`${roboto.variable} ${rubik.variable}`}>{children}</body>
     </html>
   );
