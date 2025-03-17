@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto, Rubik } from 'next/font/google';
+import { Header } from '@/widgets/Header';
+import { Footer } from '@/widgets/Footer';
 import './styles/globals.scss';
 
 const roboto = Roboto({
@@ -27,7 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${roboto.variable} ${rubik.variable}`}>{children}</body>
+      <body className={`${roboto.variable} ${rubik.variable}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

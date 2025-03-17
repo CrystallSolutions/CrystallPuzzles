@@ -6,14 +6,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font: var(--fw-medium) var(--fz-btn-xs) var(--ff-first);
+  font: var(--fw-medium) var(--fz-sm) var(--ff-first);
   border: var(--border);
   border-radius: var(--radius);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
   @include md() {
-    font-size: var(--fz-mob-btn);
+    font-size: var(--fz-xs);
   }
 }
 

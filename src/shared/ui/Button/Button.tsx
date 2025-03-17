@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import classNames from "classnames";
-import styles from "./Button.module.scss";
+import classNames from 'classnames';
+import styles from './Button.module.scss';
 
-type ButtonColors = "dark" | "light";
+type ButtonColors = 'dark' | 'light';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ interface ButtonProps {
 export const Button = ({
   children,
   className,
-  bgColor = "light",
+  bgColor = 'light',
   id,
   onClick,
 }: ButtonProps) => {

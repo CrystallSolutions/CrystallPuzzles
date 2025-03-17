@@ -1,5 +1,5 @@
 import { Policy } from '@/features';
-import { Button, Input, Password, Title } from '@/shared';
+import { Button, Input, Password, Title } from '@/shared/ui';
 import styles from './page.module.scss';
 
 export default function RegisterPage() {

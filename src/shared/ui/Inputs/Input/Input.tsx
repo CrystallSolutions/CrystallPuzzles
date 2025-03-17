@@ -1,5 +1,5 @@
-import styles from "./Input.module.scss";
-import {ReactNode} from "react";
+import { ReactNode } from 'react';
+import styles from './Input.module.scss';
 
 interface InputProps {
   label: string;

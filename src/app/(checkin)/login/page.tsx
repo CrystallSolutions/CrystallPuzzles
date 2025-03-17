@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { Policy } from '@/features';
-import { Button, Input, Password, Title } from '@/shared';
+import { Button, Input, Password, Title } from '@/shared/ui';
 import styles from './page.module.scss';
 
 export default function LoginPage() {

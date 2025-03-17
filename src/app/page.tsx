@@ -1,9 +1,11 @@
+import { Sidebar } from '@/widgets/Sidebar';
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <h1>main page</h1>
+      <Sidebar />
     </div>
   );
 }

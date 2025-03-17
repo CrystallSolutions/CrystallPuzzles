@@ -1,4 +1,4 @@
-@use "src/app/styles/mixins.scss" as *;
+@use 'src/app/styles/mixins.scss' as *;
 
 .container {
   position: relative;
@@ -19,7 +19,7 @@
   padding: var(--spacing-md) var(--spacing-sm);
   width: 47rem;
   background-color: var(--white-color);
-  font: var(--fw-regular) var(--fz-btn-xs) var(--ff-second);
+  font: var(--fw-regular) var(--fz-sm) var(--ff-second);
   border: var(--border);
   border-radius: var(--radius-sm);
   outline: none;
