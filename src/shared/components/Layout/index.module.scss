@@ -1,0 +1,26 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+	background-color: #fff;
+}
+.main {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.footer {
+  margin-top: auto;
+}

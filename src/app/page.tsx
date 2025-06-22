@@ -1,9 +1,14 @@
-import styles from './page.module.scss';
+'use client';
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <h1>main page</h1>
-    </div>
-  );
+import { signOut, useSession } from 'next-auth/react';
+import { useEffect } from 'react';
+
+export default function MainPage() {
+  const { data: session, status } = useSession();
+  useEffect(() => {
+    signOut();
+  }, []);
+
+  console.log(session, status);
+  return <div className="">Main</div>;
 }

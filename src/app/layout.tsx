@@ -1,18 +1,9 @@
 import type { Metadata } from 'next';
-import { Roboto, Rubik } from 'next/font/google';
 import './styles/globals.scss';
-
-const roboto = Roboto({
-  variable: '--ff-first',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '900'],
-});
-
-const rubik = Rubik({
-  variable: '--ff-second',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '900'],
-});
+import { Layout, LayoutHeader, LayoutMain } from '@/shared/components/Layout';
+import Header from '@/widgets/Header';
+import style from './lauout.module.scss';
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata: Metadata = {
   title: 'Crystal Puzzles',
@@ -27,7 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${roboto.variable} ${rubik.variable}`}>{children}</body>
+      <SessionProvider>
+        <Layout>
+          <LayoutHeader>
+            <Header />
+          </LayoutHeader>
+          <LayoutMain className={style.main}>{children}</LayoutMain>
+        </Layout>
+      </SessionProvider>
     </html>
   );
 }

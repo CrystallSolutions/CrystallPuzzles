@@ -1,4 +1,4 @@
-import styles from "./Input.module.scss";
+import styles from "./index.module.scss";
 import {ReactNode} from "react";
 
 interface InputProps {

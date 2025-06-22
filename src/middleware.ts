@@ -1,15 +1,12 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { auth } from './shared/lib/auth';
 
-// This function can be marked `async` if using `await` inside
-export function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname === '/') {
-    return NextResponse.redirect(new URL('/login', request.url));
+export default auth((req) => {
+  if (!req.auth && req.nextUrl.pathname !== '/auth') {
+    const newUrl = new URL('/auth', req.nextUrl.origin);
+    return Response.redirect(newUrl);
   }
-  return NextResponse.next();
-}
+});
 
-// See "Matching Paths" below to learn more
 export const config = {
-  matcher: '/:path*',
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
