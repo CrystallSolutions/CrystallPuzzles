@@ -1,4 +1,5 @@
 'use client';
+'use client';
 
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
@@ -17,6 +18,7 @@ export function Password({ dataKey, label }: PasswordProps) {
     <Input
       label={label}
       dataKey={dataKey}
+      type={openEye ? 'password' : 'text'}
       type={openEye ? 'password' : 'text'}
       required
     >

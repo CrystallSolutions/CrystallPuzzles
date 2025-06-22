@@ -1,0 +1,30 @@
+@use 'src/app/styles/mixins' as *;
+
+.header {
+  padding-block: var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--spacing-lg) * 2);
+
+  @include md() {
+    padding-block: var(--spacing-sm);
+  }
+
+  .logo {
+    display: flex;
+
+    &::after {
+      content: url('../../../shared/assets/svg/logo_title.svg');
+      margin-left: var(--spacing-sm);
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    @include md() {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
