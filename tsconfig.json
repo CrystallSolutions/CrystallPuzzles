@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
     "plugins": [
       {
         "name": "next"
@@ -27,12 +28,13 @@
   },
   "include": [
     "next-env.d.ts",
+    "svgr.d.ts",
     "**/*.ts",
+    "src/**/*.ts",
     "**/*.tsx",
     "./prisma/**/*.ts",
     ".next/types/**/*.ts",
-    "src/index.js",
-    "svgr.d.ts"
+    "src/index.js"
   ],
   "exclude": ["node_modules"]
 }

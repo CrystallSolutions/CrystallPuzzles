@@ -4,7 +4,7 @@ import { RefObject, useEffect } from 'react';
 export function useClickOutside(
   ref: RefObject<HTMLElement | null>,
   callback: (e: MouseEvent) => void,
-  deps: any[] = [],
+  deps = [],
 ) {
   useEffect(() => {
     const eventTypes = [
@@ -16,6 +16,7 @@ export function useClickOutside(
       'touchend',
     ];
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;

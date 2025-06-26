@@ -1,6 +1,5 @@
 'use client';
 import { useClickOutside } from '@/shared/hooks/useClickOutside';
-import style from './index.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
@@ -42,44 +41,44 @@ export function Select({
 
   useClickOutside(ref, () => {
     setFocus(false);
-  }, [ref]);
+  }, []);
 
   return (
     <div
-      className={style.container}
+      className=""
       data-focus={focus}
       onFocus={() => setFocus(0)}
       onClick={() => setFocus(0)}
       ref={ref}
     >
-      <div className={style.input_container}>
-        <div className={style.selected_container}>
+      <div className="">
+        <div className="">
           {state.map((item: string) => (
-            <div key={item} className={style.selected}>
+            <div key={item} className="">
               {item}
               <X
                 onClick={() => setState(state.filter((i) => i !== item))}
-                className={style.x}
+                className=""
               />
             </div>
           ))}
         </div>
         <input
           type="text"
-          className={style.input}
+          className=""
           onChange={(e) => setInput(e.target.value)}
           value={input}
         />
         <div className="">{input}</div>
       </div>
-      <div className={style.options_container}>
+      <div className="">
         {focus !== false
           ? options
               ?.filter((item) => item.includes(input) && !state.includes(item))
               .map((item: string, index: number) => (
                 <div
                   key={item}
-                  className={style.option}
+                  className=""
                   onClick={() => {
                     setState([...state, item]);
                   }}

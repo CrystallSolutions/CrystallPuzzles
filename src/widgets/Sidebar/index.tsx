@@ -2,30 +2,30 @@
 
 import { useState } from 'react';
 import { useResize } from '@/shared/hooks';
-import styles from './Sidebar.module.scss';
+
 
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isScreenMd } = useResize();
 
   return (
-    <div className={styles.wrapper}>
+    <div className="">
 
-      <aside className={isOpen ? styles.sidebar_open : styles.sidebar}>
+      <aside className="">
         {isScreenMd && (
           <button
-            className={isOpen ? styles.arrow_close : styles.arrow_open}
+            className=""
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            {/* <Arrow className={styles.arrow_svg} /> */}
+            {/* <Arrow className="" /> */}
           </button>
         )}
-        {/* <Account user={user} className={styles.account} isMobile={isScreenMd} />
+        {/* <Account user={user} className="" isMobile={isScreenMd} />
         <NavMenuList role={user.role} isMobile={isScreenMd} /> */}
 
-        <div className={styles.links}>
-          <div className={`${styles.sidebar_btn} ${styles.exit}`}>
-            {/* <img src={exit} className={styles.link_icon} />
+        <div className="">
+          <div className="">
+            {/* <img src={exit} className="" />
             {!isScreenMd && <span>Выйти</span>} */}
           </div>
         </div>

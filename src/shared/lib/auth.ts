@@ -10,7 +10,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-				if (!credentials) return null;
+        if (!credentials) return null;
         // console.log(credentials);
         return {
           id: '1',

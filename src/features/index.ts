@@ -1,3 +1,2 @@
-import {Policy} from "./Policy/Policy";
-
-export {Policy};
+export { Policy } from './Policy';
+export { Password } from './Password';

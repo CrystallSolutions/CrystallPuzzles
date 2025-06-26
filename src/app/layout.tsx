@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import './styles/globals.scss';
-import { Layout, LayoutHeader, LayoutMain } from '@/shared/components/Layout';
+import './globals.css';
 import Header from '@/widgets/Header';
-import style from './lauout.module.scss';
 import { SessionProvider } from 'next-auth/react';
+import { Footer } from '@/widgets/Footer';
+import { Sidebar } from '@/widgets/Sidebar';
 
 export const metadata: Metadata = {
   title: 'Crystal Puzzles',
@@ -19,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <SessionProvider>
-        <Layout>
-          <LayoutHeader>
-            <Header />
-          </LayoutHeader>
-          <LayoutMain className={style.main}>{children}</LayoutMain>
-        </Layout>
+        <body className="min-h-screen flex flex-col bg-gradient-light">
+          <Header />
+          <div className="flex flex-grow max-w">
+            <main className="container">{children}</main>
+            <Sidebar />
+          </div>
+          <Footer />
+        </body>
       </SessionProvider>
     </html>
   );
