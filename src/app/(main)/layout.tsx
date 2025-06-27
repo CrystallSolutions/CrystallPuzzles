@@ -16,14 +16,16 @@ export default function RootLayout({
     <>
       <Sidebar
         routes={[
-          { name: 'Главная', path: '/' },
           { name: 'Профиль', path: '/profile' },
-          { name: 'Настройки', path: '/settings' },
-          { name: 'Выход', path: '/logout' },
-          { name: 'Помощь', path: '/help' },
+          { name: 'Главная', path: '/' },
+          { name: 'Расписание', path: '/schedule' },
+          { name: 'Уведомления', path: '/notifications' },
+          { name: 'Сообщения', path: '/messages' },
+          { name: 'Задания', path: '/tasks' },
+          { name: 'Награды', path: '/rewards' },
         ]}
       />
-      <main className="">{children}</main>
+      <main className="flex flex-grow">{children}</main>
     </>
   );
 }
