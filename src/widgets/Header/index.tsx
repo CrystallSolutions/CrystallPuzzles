@@ -6,7 +6,7 @@ import LogoTitle from '@/assets/header/logo_title.svg';
 
 export default function Header({}) {
   return (
-    <header>
+    <header className='shadow-xl'>
       <div className="container">
         <Link href="/">
           <div className="flex items-center gap-2">

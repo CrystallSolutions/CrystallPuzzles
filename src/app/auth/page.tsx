@@ -1,7 +1,6 @@
 'use client';
 
 import { Input } from '@/shared/ui/Input';
-import Link from 'next/link';
 import { Button } from '@/shared/ui/Button';
 import { Policy } from '@/features';
 import { useSearchParams } from '@/shared/hooks/useSearchParams';
@@ -31,47 +30,49 @@ export default function Auth() {
   }
 
   return (
-    <div className="w-full md:w-1/2">
-      <h1 className="text-center text-2xl">
-        {register ? 'Регистрация' : 'Вход'}
-      </h1>
-      <form className="flex flex-col gap-4" onSubmit={handleLogin}>
-        {register && (
+    <main className="w-full self-center grid place-items-center">
+      <div className="w-full md:w-1/3 flex flex-col gap-4">
+        <h1 className="text-center text-2xl after_underline">
+          {register ? 'Регистрация' : 'Вход'}
+        </h1>
+        <form className="flex flex-col gap-4" onSubmit={handleLogin}>
+          {register && (
+            <Input
+              id="name"
+              name="name"
+              label="Ваше имя"
+              type="text"
+              required
+              placeholder="Ivan"
+            />
+          )}
           <Input
-            id="name"
-            name="name"
-            label="Ваше имя"
-            type="text"
+            id="email"
+            name="email"
+            type="email"
+            label="Ваш e-mail"
             required
-            placeholder="Ivan"
+            placeholder="ivanov@example.com"
           />
-        )}
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          label="Ваш e-mail"
-          required
-          placeholder="ivanov@example.com"
-        />
 
-        <Password />
+          <Password />
 
-        <Policy />
+          <Policy />
 
-        <Button dark type="submit" className="py-2">
-          {register ? 'Зарегистрироваться' : 'Войти'}
-        </Button>
+          <Button dark type="submit" className="py-2">
+            {register ? 'Зарегистрироваться' : 'Войти'}
+          </Button>
 
-        <span
-          className="text-center cursor-pointer"
-          onClick={() => setSearchParams({ register: !register })}
-        >
-          {register
-            ? 'Уже есть аккаунт? Войти'
-            : 'Нет аккаунта? Зарегистрироваться'}
-        </span>
-      </form>
-    </div>
+          <span
+            className="text-center cursor-pointer"
+            onClick={() => setSearchParams({ register: !register })}
+          >
+            {register
+              ? 'Уже есть аккаунт? Войти'
+              : 'Нет аккаунта? Зарегистрироваться'}
+          </span>
+        </form>
+      </div>
+    </main>
   );
 }

@@ -3,7 +3,6 @@ import './globals.css';
 import Header from '@/widgets/Header';
 import { SessionProvider } from 'next-auth/react';
 import { Footer } from '@/widgets/Footer';
-import { Sidebar } from '@/widgets/Sidebar';
 
 export const metadata: Metadata = {
   title: 'Crystal Puzzles',
@@ -21,9 +20,8 @@ export default function RootLayout({
       <SessionProvider>
         <body className="min-h-screen flex flex-col bg-gradient-light">
           <Header />
-          <div className="flex flex-grow max-w">
-            <main className="container">{children}</main>
-            <Sidebar />
+          <div className="container flex flex-grow gap-4 relative p-2">
+            {children}
           </div>
           <Footer />
         </body>

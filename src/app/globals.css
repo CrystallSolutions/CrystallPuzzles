@@ -28,3 +28,15 @@
 @utility button-light {
 	@apply bg-light border-dark text-dark px-2 py-1 cursor-pointer hover:bg-dark hover:text-white
 }
+
+@utility link {
+	@apply cursor-pointer hover:text-dark;
+}
+
+@utility after_underline {
+	@apply after:block after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-dark after:rounded-full;
+}
+
+@utility before_underline {
+	@apply before:block before:bottom-0 before:left-0 before:right-0 before:h-1 before:bg-dark before:rounded-full;
+}
